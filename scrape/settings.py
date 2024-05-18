@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q%40xzb7qy53plm7(=+=24#v+l0%kkjg@2c44mcw2sj2bt0#t8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'sagarkafle9898.com.np']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'sagarkafle9898.com.np','127.0.0.1']
 
 
 # Application definition
@@ -76,10 +76,13 @@ WSGI_APPLICATION = 'scrape.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'scrape',
+        'USERNAME': 'sager',
+        'PASSWORD': 'admin123#',
+        'HOST': 'localhost',
+    }
 }
 
 
