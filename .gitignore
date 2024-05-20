@@ -1,20 +1,22 @@
+# Byte-compiled / optimized / DLL files
 *.pyc
 __pycache__/
-.idea/
-db.sqlite3
+
+# virtualenv
 env/
 venv/
 .env
-.idea
+
 media/
 .vscode
 .output
-.idea
-static_cdn/
-celerybeat-schedule.bak
-celerybeat-schedule.dat
-celerybeat-schedule.dir
-celerybeat-schedule
-celerybeat.pid
+static/
 log/
-.DS_Store
+
+# pyenv
+.python-version
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
