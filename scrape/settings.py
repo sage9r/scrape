@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
-load_dotenv()
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-q%40xzb7qy53plm7(=+=24#v+l0%kkjg@2c44mcw2sj2bt0#t8'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'sagarkafle9898.com.np','127.0.0.1']
 
@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'scrape.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': os.environ.get('POSTGRES_USER'),
-        'HOST': os.environ.get('POSTGRES_HOST'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'NAME': os.environ.get('POSTGRES_DATABASE'),
-        'PORT': os.environ.get('POSTGRES_PORT'),
+        'USER': config('POSTGRES_USER'),
+        'HOST': config('POSTGRES_HOST'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
+        'NAME': config('POSTGRES_DATABASE'),
+        'PORT': config('POSTGRES_PORT'),
     }
 }
 
@@ -141,3 +141,10 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'homes'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = config('EMAIL_HOST')
+EMAIL_HOST_PASSWORD = config('EMAIL_PASS')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

@@ -8,7 +8,7 @@ from .models import Language
 
 # Create your views here.
 class HomeView(LoginRequiredMixin, TemplateView):
-    template_name = "index.html"
+    template_name = "home/home.html"
     login_url = "/login/"
     redirect_field_name = "homes"
 
