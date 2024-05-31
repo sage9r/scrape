@@ -10,3 +10,12 @@
     </div>
 </form>
 {% endblock %}
+
+{% block script %}
+<script>
+
+    $(document).ready(function(){
+        $(<span class="alert alert-info">This email will be used for recovery!</span>).insertBefore('#div_id_email');
+    });
+</script>
+{% endblock %}
