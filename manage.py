@@ -2,11 +2,15 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+from scrape.settings import production
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings')
+    if production.DEBUG:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings.production')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings.local')
+        
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
