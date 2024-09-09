@@ -19,5 +19,6 @@
         "src": "/(.*)",
         "dest": "scrape/wsgi.py"
       }
-    ]
+    ],
+    "outputDirectory": "staticfiles_build"
   }
