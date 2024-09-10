@@ -18,5 +18,4 @@ log/
 
 # Django stuff:
 *.log
-local.py
 db.sqlite3
