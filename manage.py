@@ -2,14 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from scrape.settings import production
+from scrape.settings.settings import DEBUG
 
 def main():
     """Run administrative tasks."""
-    if production.DEBUG:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings.production')
-    else:
+    if DEBUG:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings.local')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scrape.settings.production')
         
     try:
         from django.core.management import execute_from_command_line
