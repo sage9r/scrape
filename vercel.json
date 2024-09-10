@@ -19,5 +19,5 @@
         "src": "/(.*)",
         "dest": "scrape/wsgi.py"
       }
-    ],
-  }
+    ]
+}
