@@ -1,0 +1,191 @@
+header{
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+}
+
+a:link {
+    color: black;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bg-img{
+    position: absolute;
+    width: 1800px;
+    top: calc(50% - 180px);
+    left: calc(50% + 10px);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* display: none; */
+}
+.fog-1{
+    /* display: none; */
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 250px);
+    left: calc(50% - 650px);
+    width: 1300px;
+}
+.fog-7{
+    /* display: none; */
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 100px);
+    left: calc(50% - 300px);
+    width: 700px;
+}
+.mountain-10{
+
+    /* display: none; */
+    z-index: 3;
+    top: calc(50% - 120px);
+    width: 570px;
+    position: absolute;
+    left: calc(50% - 100px);
+}
+.fog-2{
+
+    /* display: none; */
+    z-index: 4;
+    top: calc(50% - 240px);
+    left: calc(50% - 657px );
+    position: absolute;
+    width: 1300px;
+}
+.mountain-9{
+
+    /* display: none; */
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - 200px);
+    width: 463px;
+    left: calc(50% - 570px);
+}
+.mountain-8{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 6;
+    top: calc(50% - 220px);
+    width: 786px;
+    left: calc(50% - 575px);
+}
+.fog-3{
+    
+    /* display: none; */
+    position: absolute;
+    z-index: 7;
+    top: calc(50% - 130px);
+    left: calc(50% - 650px);
+    width: 449px;
+}
+.mountain-7{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 8;
+    width: 515px;
+    top: calc(50% + 134px);
+    left: calc(50% + 305px);
+}
+.mountain-6{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 280px);
+    width: 383.5px;
+    left: calc(50% + 300px);
+}
+.fog-4{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 11;
+    top: calc(50% - 60px);
+    left: calc(50% - 700px);
+    width: 543px;
+}
+.mountain-5{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 12;
+    top: calc(50% + 40px);
+    width: 583px;
+    left: calc(50% - 170px);
+}
+.fog-5{
+
+    display: none; 
+    z-index: 13;
+    top: calc(50% + 149px);
+    left: calc(50% - 28px);
+    width: 1000px;
+}
+.mountain-4{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 14;
+    top: calc(50% - 80px);
+    width: 717px;
+    left: calc(50% - 770px)
+}
+.mountain-3{ 
+
+    /* display: none; */
+    position: absolute;
+    z-index: 15;
+    top: calc(50% - 133px);
+    left: calc(50% + 330px);
+    width: 419px;
+}
+.fog-6{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 16;
+    top: calc(50% + 100px); 
+    left: calc(50% - 650px);
+    width: 1400px;
+}
+.mountain-2{
+ 
+    /* display: none; */
+    position: absolute;
+    z-index: 17;
+    top: calc(50% - 40px);
+    left: calc(50% - 30px);
+    width: 625px;
+}
+.mountain-1{
+
+    /* display: none; */
+    position: absolute;
+    z-index: 18;
+    top: calc(50% - 470px);
+    left: calc(50% - 800px);
+    width: 450px;
+}
+.sun-rays{
+
+    position: absolute;
+    z-index: 19;
+    top: 50px;
+    right: 0;
+    width: 550px;
+}
+.black-shadow{
+
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}

@@ -10,7 +10,6 @@ venv/
 media/
 .vscode
 .output
-static/
 log/
 
 # pyenv
