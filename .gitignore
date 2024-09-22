@@ -19,5 +19,5 @@ log/
 *.log
 db.sqlite3
 
-vercel.json
 staticfiles/
+nginx.conf
