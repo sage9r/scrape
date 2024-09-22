@@ -1,8 +1,8 @@
 echo " BUILD START"
 python3 -m venv env
-sudo apt install nginx
-sudo cp nginx.conf /etc/nginx/conf.d/
-sudo systemctl restart nginx
+apt install nginx
+cp nginx.conf /etc/nginx/conf.d/
+systemctl restart nginx
 source env/bin/activate
 pip install --upgrade pip
 pip3 install -r requirements.txt
