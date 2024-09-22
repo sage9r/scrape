@@ -26,11 +26,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'sagarkafle9898.com.np','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8080'
+]
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8080',
+]
 # Application definition
 
 INSTALLED_APPS = [
